@@ -29,7 +29,7 @@ Pod::Spec.new do |spec|
   
   # 资源文件目录，可以在此目录下存放图片、xib等资源，可以使用通配符或者{png,jpg,xib}这样的方式来指定文件类型
   spec.resource_bundles = {
-    'HLHUD' => ['HLHUD/HLHUD/*.*']
+    'HLHUD' => ['HLHUD/HLHUD/HLHUD.bundle/**/*.*']
   }
 
   # 依赖系统库
