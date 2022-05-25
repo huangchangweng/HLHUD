@@ -6,7 +6,7 @@
 //
 
 #import "HLHUD.h"
-#import <MBProgressHUD/MBProgressHUD.h>
+#import "MBProgressHUD.h"
 
 @implementation HLHUD
 
