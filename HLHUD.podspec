@@ -36,6 +36,6 @@ Pod::Spec.new do |spec|
   spec.frameworks = "UIKit"
 
   # 依赖第三方库
-  spec.dependency 'MBProgressHUD', '1.2.0'
+  spec.dependency "MBProgressHUD"
 
 end
