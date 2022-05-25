@@ -22,7 +22,9 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, "9.0"
 
   # git仓库，tag
-  spec.source       = { :git => "https://github.com/huangchangweng/HLHUD.git", :tag => "1.0.0" }
+  spec.source       = { :git => "git@github.com:huangchangweng/HLHUD.git", :tag => "1.0.0" }
+  
+  spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
 
   # 资源路径
   spec.source_files  = "HLHUD/HLHUD/*.{h,m}"
