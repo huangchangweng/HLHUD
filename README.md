@@ -1,7 +1,7 @@
 # HLHUD
 对MBProgressHUD简单封装
 
-##### 支持使用CocoaPods引入, Podfile文件中添加:
+##### 支持使用CocoaPods引入, Podfile文件中添加: `暂未支持`
 
 ``` objc
 pod 'HLHUD', '1.0.0'
