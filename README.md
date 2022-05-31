@@ -4,7 +4,7 @@
 ##### 支持使用CocoaPods引入, Podfile文件中添加: 
 
 ``` objc
-pod 'HLHUD', '1.0.0'
+pod 'HLHUD', '1.0.1'
 ```
 HLHUD中全是类方法，导入即用。
 
@@ -33,7 +33,11 @@ HLHUD中全是类方法，导入即用。
 iOS 9.0 +, Xcode 7.0 +
 
 # Version
+  
+* 1.0.1 :
 
+  修改图片资源加载代码
+  
 * 1.0.0 :
 
   完成HLHUD基础搭建
