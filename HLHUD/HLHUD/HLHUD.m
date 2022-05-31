@@ -18,23 +18,19 @@
 + (UIViewController *)topViewController {
     UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
     return [self topVisibleViewControllerOfViewControlller:rootViewController];
-    
 }
 
 + (UIViewController *)topVisibleViewControllerOfViewControlller:(UIViewController *)vc {
     if ([vc isKindOfClass:[UITabBarController class]]) {
         UITabBarController *tabBarController = (UITabBarController *)vc;
         return [self topVisibleViewControllerOfViewControlller:tabBarController.selectedViewController];
-        
     } else if ([vc isKindOfClass:[UINavigationController class]]) {
         UINavigationController *navigationController = (UINavigationController *)vc;
         return [self topVisibleViewControllerOfViewControlller:navigationController.visibleViewController];
-        
     } else if (vc.presentedViewController) {
         return [self topVisibleViewControllerOfViewControlller:vc.presentedViewController]; }
     else if (vc.childViewControllers.count > 0){
         return [self topVisibleViewControllerOfViewControlller:vc.childViewControllers.lastObject];
-        
     }
     return vc;
 }
@@ -71,17 +67,17 @@
     [MBProgressHUD hideHUDForView:self.inView animated:animated];
 }
 
-+ (UIImage *)budleImageWithName:(NSString *)iamgeName
++ (UIImage *)budleImageWithName:(NSString *)imageName
 {
-    /// 静态库 url 的获取
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"HLHUD" withExtension:@"bundle"];
+    NSString *bundleName = @"HLHUD";
+    // 静态库 url 的获取
+    NSURL *url = [[NSBundle mainBundle] URLForResource:bundleName withExtension:@"bundle"];
     if (!url) {
-        /// 动态库 url 的获取
-        url = [[NSBundle bundleForClass:[self class]] URLForResource:@"HLHUD" withExtension:@"bundle"];
+        // 动态库 url 的获取
+        url = [[NSBundle bundleForClass:[self class]] URLForResource:bundleName withExtension:@"bundle"];
     }
     NSBundle *bundle = [NSBundle bundleWithURL:url];
-    
-    UIImage *image = [UIImage imageNamed:iamgeName inBundle:bundle compatibleWithTraitCollection:nil];
+    UIImage *image = [UIImage imageNamed:imageName inBundle:bundle compatibleWithTraitCollection:nil];
     return image;
 }
 
