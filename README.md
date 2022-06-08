@@ -32,6 +32,10 @@ HLHUD中全是类方法，导入即用。
 
 iOS 9.0 +, Xcode 7.0 +
 
+# Dependency
+
+- "MBProgressHUD", "1.2.0"
+
 # Version
   
 * 1.0.1 :
