@@ -7,6 +7,8 @@
 pod 'HLHUD', '1.0.1'
 ```
 HLHUD中全是类方法，导入即用。
+# Demonstration
+![image](https://github.com/huangchangweng/HLHUD/blob/main/QQ20220610-135707.gif)
 
 基本使用方法:<p>
 
